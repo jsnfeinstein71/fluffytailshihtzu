@@ -1,66 +1,319 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>FluffyTail Shih Tzu</title>
-    <meta name="description" content="Small home-based Shih Tzu breeder. Our dogs live with us as family pets. Join the waitlist for upcoming litters." />
-    <style>
-      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#fff;color:#111}
-      .wrap{max-width:900px;margin:0 auto;padding:48px 20px}
-      .card{border:1px solid #e7e7e7;border-radius:18px;padding:28px;box-shadow:0 6px 24px rgba(0,0,0,.06)}
-      h1{font-size:42px;letter-spacing:-.02em;margin:0 0 10px}
-      p{font-size:18px;line-height:1.6;margin:0 0 14px;color:#333}
-      .pill{display:inline-block;background:#f3f3f3;border:1px solid #e7e7e7;border-radius:999px;padding:8px 12px;font-size:14px;margin-bottom:18px}
-      .btn{display:inline-block;background:#111;color:#fff;text-decoration:none;padding:12px 16px;border-radius:12px;font-weight:600;margin-right:10px}
-      .muted{font-size:14px;color:#666;margin-top:18px}
-      ul{margin:12px 0 0 18px;color:#333}
-      li{margin:6px 0}
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <div class="pill">Between litters • Waitlist open</div>
-      <div class="card">
-        <h1>FluffyTail Shih Tzu</h1>
-        <p>
-          We’re a small, home-based Shih Tzu breeder (8–9 years). Our dogs live with us as family pets — not in a kennel.
-        </p>
-        <p>
-          We’re currently between litters. If you’d like first notice when puppies are expected or available, join the waitlist.
-        </p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FluffyTail Shih Tzu</title>
+  <meta name="description" content="FluffyTail Shih Tzu — small, home-based Shih Tzu breeder (8–9 years). Our dogs live with us as family pets. Join the waitlist for first notice." />
 
-        <h2 style="margin-top:28px;">Join the Waitlist</h2>
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --panel:#111318;
+      --card:#14171d;
+      --muted:#a9b0bd;
+      --text:#eef1f6;
+      --line:rgba(255,255,255,.10);
+      --soft:rgba(255,255,255,.06);
+      --accent:#ffffff;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 20px;
+      --radius2: 14px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,.08), transparent 50%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(255,255,255,.05), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 36px 18px 64px;
+    }
 
-<iframe
-  src="https://tally.so/embed/Gx6ONk?alignLeft=1&hideTitle=1&transparentBackground=1"
-  width="100%"
-  height="900"
-  loading="lazy"
-  frameborder="0"
-  marginheight="0"
-  marginwidth="0"
-  title="FluffyTail Shih Tzu - Puppy Waitlist">
-</iframe>
+    /* Top bar */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      backdrop-filter: blur(8px);
+    }
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      background:#45f48c;
+      box-shadow: 0 0 0 4px rgba(69,244,140,.12);
+    }
+    .nav{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
 
-        <p>
-          <a class="btn" href="https://www.gooddog.com/breeders/fluffytail-shih-tzu-alabama" target="_blank" rel="noopener noreferrer">View on GoodDog</a>
-        </p>
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      text-decoration:none;
+      font-weight:600;
+      font-size: 14px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      background: #ffffff;
+      color: #0b0c10;
+      border-color: rgba(255,255,255,.9);
+    }
+    .btn.primary:hover{background:#f3f4f6}
 
-        <p class="muted">
-          What you can expect:
-        </p>
-        <ul>
-          <li>In-home raised puppies with family handling and socialization</li>
-          <li>Clear adoption process and communication</li>
-          <li>Direct-to-customer option coming soon</li>
-        </ul>
+    /* Hero */
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 20px;
+      padding: 28px;
+    }
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns: 1fr; padding: 22px;}
+    }
 
-        <p class="muted">
-          © <span id="y"></span> FluffyTail Shih Tzu
-        </p>
+    .h1{
+      font-size: 44px;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+      line-height: 1.06;
+    }
+    @media (max-width: 520px){ .h1{font-size:36px;} }
+
+    .lead{
+      color: rgba(238,241,246,.86);
+      font-size: 16px;
+      margin: 0 0 16px;
+    }
+    .sublead{
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 14px;
+    }
+
+    .bullets{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 520px){ .bullets{grid-template-columns: 1fr;} }
+    .bullet{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color: rgba(238,241,246,.82);
+      font-size: 14px;
+    }
+    .check{
+      width:18px;height:18px;border-radius:6px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.14);
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+    .check:before{
+      content:"✓";
+      font-size: 12px;
+      opacity:.9;
+    }
+
+    /* Right column card */
+    .side{
+      background: rgba(0,0,0,.18);
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      padding: 18px;
+    }
+    .side h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .01em;
+    }
+    .side p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .mini{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
+
+    /* Waitlist section */
+    .section{
+      margin-top: 18px;
+      padding: 22px 28px 26px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+    }
+    @media (max-width: 900px){ .section{padding: 18px 22px 22px;} }
+
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap:wrap;
+    }
+    .section-title h3{
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: .01em;
+    }
+    .section-title .hint{
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .waitlist-box{
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    /* Make iframe look intentional */
+    .waitlist-box iframe{
+      display:block;
+      width:100%;
+      border:0;
+      border-radius: 12px;
+      background: transparent;
+    }
+
+    /* Footer */
+    .footer{
+      margin-top: 14px;
+      color: rgba(255,255,255,.40);
+      font-size: 12px;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="pill"><span class="dot"></span> Between litters • Waitlist open</div>
+      <div class="nav">
+        <a class="btn" href="#waitlist">Join the Waitlist</a>
+        <a class="btn" href="https://www.gooddog.com/breeders/fluffytail-shih-tzu-alabama" target="_blank" rel="noopener noreferrer">View on GoodDog</a>
       </div>
     </div>
-    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
-  </body>
+
+    <div class="hero">
+      <div class="hero-inner">
+
+        <!-- Left: brand + story -->
+        <div>
+          <h1 class="h1">FluffyTail Shih Tzu</h1>
+          <p class="lead">
+            We’re a small, home-based Shih Tzu breeder (8–9 years). Our dogs live with us as family pets — not in a kennel.
+          </p>
+          <p class="sublead">
+            We’re currently between litters. If you’d like first notice when puppies are expected or available, join the waitlist below.
+          </p>
+
+          <div class="bullets" aria-label="What you can expect">
+            <div class="bullet"><span class="check"></span><span>In-home raised puppies with daily handling & socialization</span></div>
+            <div class="bullet"><span class="check"></span><span>Clear communication and a straightforward adoption process</span></div>
+            <div class="bullet"><span class="check"></span><span>Health-first approach and transparent updates</span></div>
+            <div class="bullet"><span class="check"></span><span>Direct-to-customer option coming soon (Innovation Strategies LLC)</span></div>
+          </div>
+        </div>
+
+        <!-- Right: callouts -->
+        <aside class="side">
+          <h2>How the waitlist works</h2>
+          <p>
+            Add your info once. When puppies are expected or available, we’ll notify the waitlist first.
+            No spam. No pressure.
+          </p>
+
+          <div class="mini">
+            <a class="btn primary" href="#waitlist">Join the Waitlist</a>
+            <a class="btn" href="https://www.gooddog.com/breeders/fluffytail-shih-tzu-alabama" target="_blank" rel="noopener noreferrer">GoodDog profile</a>
+          </div>
+
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid var(--line);">
+            <p style="margin:0; color:rgba(238,241,246,.78); font-size:13px;">
+              Prefer to browse first? Our GoodDog page has past listings, reviews, and platform protections.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+
+      <div id="waitlist" class="section">
+        <div class="section-title">
+          <h3>Join the Waitlist</h3>
+          <div class="hint">Takes ~30 seconds • We only email when it matters</div>
+        </div>
+
+        <div class="waitlist-box">
+          <iframe
+            src="https://tally.so/embed/Gx6ONk?alignLeft=1&hideTitle=1&transparentBackground=1"
+            height="760"
+            title="FluffyTail Shih Tzu - Puppy Waitlist">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> FluffyTail Shih Tzu • All dogs are raised in-home as family pets
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
