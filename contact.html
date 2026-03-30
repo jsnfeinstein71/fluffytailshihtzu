@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | FluffyTail Shih Tzu</title>
+  <meta name="description" content="Contact FluffyTail Shih Tzu, join the waitlist, or visit our GoodDog profile for more information." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fluffytailshihtzu.com/contact.html" />
+
+  <style>
+    :root{
+      --bg:#ffffff; --text:#15181f; --muted:#5a6472; --line:#e6e8ee; --soft:#f6f7fb;
+      --card:#ffffff; --shadow:0 10px 30px rgba(16,24,40,.08); --radius:18px; --max:900px; --blue:#1f6fff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:var(--bg);line-height:1.5}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 70px}
+    .topbar,.nav,.cta{display:flex;gap:10px;flex-wrap:wrap}
+    .topbar{align-items:center;justify-content:space-between;margin-bottom:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;text-decoration:none;color:inherit;font-weight:700;font-size:14px}
+    .btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .pad{padding:22px}
+    h1{font-size:42px;line-height:1.05;letter-spacing:-.02em;margin:0 0 12px}
+    h2{font-size:22px;margin:0 0 10px}
+    .lead{color:var(--muted);max-width:72ch}
+    iframe{width:100%;border:0;border-radius:14px;background:#fff}
+    .footer{margin-top:26px;color:#8a93a2;font-size:12px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="nav">
+        <a class="btn" href="/">Home</a>
+        <a class="btn" href="/about.html">About</a>
+        <a class="btn" href="/available-puppies.html">Available Puppies</a>
+        <a class="btn" href="/upcoming-litters.html">Upcoming Litters</a>
+      </div>
+      <a class="btn primary" href="https://www.gooddog.com/breeders/fluffytail-shih-tzu-alabama" target="_blank" rel="noopener noreferrer">View on GoodDog</a>
+    </div>
+
+    <div class="card">
+      <div class="pad">
+        <h1>Contact FluffyTail Shih Tzu</h1>
+        <p class="lead">
+          The best way to hear about future availability is to join the waitlist. You can also visit our GoodDog profile to browse more information and reach out there.
+        </p>
+
+        <div class="cta" style="margin-top:16px;">
+          <a class="btn" href="https://www.gooddog.com/breeders/fluffytail-shih-tzu-alabama" target="_blank" rel="noopener noreferrer">Open GoodDog Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px;">
+      <div class="pad">
+        <h2>Join the waitlist</h2>
+        <iframe
+          src="https://tally.so/embed/Gx6ONk?alignLeft=1&hideTitle=1"
+          height="760"
+          title="FluffyTail Shih Tzu Puppy Waitlist">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="footer">© <span id="y"></span> FluffyTail Shih Tzu</div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
